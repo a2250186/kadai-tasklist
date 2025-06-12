@@ -55,7 +55,11 @@ class TasksController extends Controller
      */
     public function edit(string $id)
     {
+        $task = Task::findOrFail($id);
 
+        return view('tasks.edit',[
+            'task' => $task,
+        ]);
     }
 
     /**
@@ -63,7 +67,11 @@ class TasksController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $task = Task::findOrFail($id);
+        $task->content = $request->content;
+        $task->save();
+
+        return redirect('/');
     }
 
     /**
