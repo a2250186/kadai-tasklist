@@ -17,6 +17,13 @@
           <input type="text" name="content" class="input input-bordered w-full" required>
         </div>
 
+        <div class="form-control my-4">
+          <label for="status" class="label">
+            <span class="label-text">ステータス:</span>
+          </label>
+          <input type="text" name="status" class="input input-bordered w-full" required>
+        </div>
+
       <div class="flex justify-center">
         <button type="submit" class="btn btn-primary btn-outline">追加</button>
       </div>
